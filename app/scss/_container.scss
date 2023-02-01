@@ -1,43 +1,93 @@
 .container{
     
     &__card{
+        overflow: hidden;
         border-radius: 1rem;
-        background-color: $white;
-        max-width: 24rem;
+        background-image: radial-gradient(circle, $darkTeal, $darkPurple);
+        max-width: 52rem;
+        max-height: 90vh;
         width: 100%;
         margin: auto;
-        text-align: center;
         position: fixed;
         align-self: auto;
     }
     &__text{
         margin: auto;
-        max-width: 18rem;
-        color: $veryDarkBlue;
+        overflow: hidden;
+        //max-width: 18rem;
+        color: $white;
         h1{
+            text-shadow: 2px 2px $veryDarkPurple;
+            text-align: center;
             font-weight: 800;
         }
-        h2{
+        h2{ 
+            text-shadow: 2px 2px $veryDarkPurple;
+            text-align: center;
             font-weight: 700;
         }
-        h3{
-            font-weight: 500;
+        h6{
+            text-shadow: 1px 1px $veryDarkPurple;
+            text-align: left;
+            margin: 0;
+            font-weight: 700;
+            font-size: 18px;
+            color: $lightGreyPurple;
         }
         p{
+            text-shadow: 1px 1px $veryDarkPurple;
+            text-align: left;
+            margin-top: 0;
             font-weight: 400;
+            font-size: 10px;
+        }
+        form{
+            text-align: center;
+        }
+        ul{
+            padding-left: .5em;
+            list-style-type: none;
+            overflow-y: scroll;
+            max-height: 70vh;
+            justify-content: center;
+        }
+        li{
+            margin:auto;
+            display:inline-flex;
+            align-items: center;
+            input[type=checkbox]{
+                margin:auto;
+            }
+            h6, p, button{
+                margin: .25rem;
+            }
+        }
+        .clicked{
+            h6, p{
+                text-decoration: line-through;
+            }
+        }
+        input{
+            margin-bottom: 10px;
+            border: 1px solid $veryDarkPurple;
+            border-radius: 15rem;
+            padding: 5px;
+        }
+        input:focus {
+            border: 1px solid $veryDarkPurple;
+            outline: none;
         }
     }
-}
-
-.hidden{
-    display: none;
 }
 
 // Mobile specific adjustments
 @media screen and (max-width: 640px) and (min-width: 240px) {
     .container{
-        %__card{
-            max-width: 21rem;
+        &__card{
+            max-width: 22rem;
+            ul{
+                max-height: 55vh;
+            }
         }
     }
 }

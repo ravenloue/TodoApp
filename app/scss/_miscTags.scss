@@ -1,0 +1,16 @@
+.hidden{
+    display: none;
+}
+
+.field{
+    display: inline-block;
+    margin: 0 10px;
+
+    label{
+        font-size: 12px;
+    }
+}
+#clearList{
+    margin-top: 0;
+    margin-left: auto;
+}

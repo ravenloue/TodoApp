@@ -5,19 +5,55 @@
         <link href="./dist/style.css" rel="stylesheet" />
     </head>
     <body>
+        
         <main>
-            <div class="container__card">
+            <!-- Name the List Section -->
+            <div id="nameList" class="container__card container__text">
                 <h2>What would you like to name your task list?</h2>
-                <input placeholder="Name list here" value="" />
+                    <form id='listNameForm'>
+                        <input placeholder="Name list here" type="text" id="listName"
+                            value="" aria-label="Enter list name here"/>
+                        <button type='submit' class="button-74">Submit</button>
+                    </form>
+                    <br>
             </div>
-            <div class="container__card hidden">
+
+            <!-- Main To Do List Section-->
+            <div id="list" class="container__card hidden">
                 <div class="container__text">
-                    <h1>To do:</h1>
+                    <section id="list_title">
+                        <h1 id="listHeader">To do:</h1>
+                    </section>
+                    <section id="list_contents">
+                        <ul id="taskList">
+                            <!-- Task form will list items here -->
+                        </ul>
+                    </section>
+                    <section id="list_input">
+                        <form id="taskInputForm">
+                            <div class="field">
+                                <label>Task Name:</label>
+                                <input type="text" id="taskName">
+                            </div>   
+                            <div class="field">
+                                <label>Details:</label>
+                                <input type="text" id="taskDesc">
+                            </div>
+                            <div class="field">
+                                <label>Expected Time (hrs):</label>
+                                <input type="number" step=".25" min='0'
+                                       id="taskTime">
+                            </div>
+                            <button type="submit" class="button-74">Add</button>
+                        </form>
+                        
+                    </section>
                 </div>
             </div>
         </main>
+        <script src="app.js"></script>
     </body>
     <footer>
-
+        <button id="clearList" class="button-74">Reset</button>
     </footer>
 </html>
